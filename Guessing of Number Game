@@ -1,13 +1,16 @@
-
 import random
 
 
 rand_num = random.randint(1,9)
 guess = int(input ("Guess a number :"))
-
+print ("Random no is ", rand_num)
 
 
 if guess == rand_num :
     print ("Yeeeeeee..You guess the correct number")
+
+elif guess> rand_num :
+    print ("You guessed too high. Try again")
 else :
-    print ("Sorry .. Better luck next time")
+    print ("You guessed too low.  Try again")
+
