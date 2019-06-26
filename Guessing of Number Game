@@ -1,0 +1,13 @@
+
+import random
+
+
+rand_num = random.randint(1,9)
+guess = int(input ("Guess a number :"))
+
+
+
+if guess == rand_num :
+    print ("Yeeeeeee..You guess the correct number")
+else :
+    print ("Sorry .. Better luck next time")
