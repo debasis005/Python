@@ -1,20 +1,21 @@
 import random
+count = 0 
 
 name = input("Register your name - " )
 
 while True :
-  rand_num = random.randint(1,9)
-  
-  guess = int(input ("Guess a number :"))
     
-  if guess> rand_num :
+    rand_num = random.randint(1 , 9)
+    count = count + 1
+    guess = int(input ("Guess a number :"))
+    if guess> rand_num :
         print ("You guessed too high. Try again")
-        
-  elif guess< rand_num:
+    elif guess< rand_num:
         print ("You guessed too low.  Try again")
         continue
-  else :
+        
+    else :
         print ("WoW!! You guess the correct number")
         break
     
-print ("Excellent Job :", name)
+print ("Excellent Job :", name , ".. you have guessed" , count-1, "times. Better Luck Next time")
