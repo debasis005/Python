@@ -1,16 +1,20 @@
 import random
 
+name = input("Register your name - " )
 
-rand_num = random.randint(1,9)
-guess = int(input ("Guess a number :"))
-print ("Random no is ", rand_num)
-
-
-if guess == rand_num :
-    print ("Yeeeeeee..You guess the correct number")
-
-elif guess> rand_num :
-    print ("You guessed too high. Try again")
-else :
-    print ("You guessed too low.  Try again")
-
+while True :
+  rand_num = random.randint(1,9)
+  
+  guess = int(input ("Guess a number :"))
+    
+  if guess> rand_num :
+        print ("You guessed too high. Try again")
+        
+  elif guess< rand_num:
+        print ("You guessed too low.  Try again")
+        continue
+  else :
+        print ("WoW!! You guess the correct number")
+        break
+    
+print ("Excellent Job :", name)
