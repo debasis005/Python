@@ -3,13 +3,17 @@ count = 0
 
 name = input("Register your name - " )
 
+print("Thanks for the Registration. Welcome", name, "to the Game " )
+
 while True :
     
     rand_num = random.randint(1 , 9)
     count = count + 1
-    guess = int(input ("Guess a number :"))
+    guess = int(input ("Guess a number between 1 to 9 :"))
+    
     if guess> rand_num :
         print ("You guessed too high. Try again")
+        
     elif guess< rand_num:
         print ("You guessed too low.  Try again")
         continue
